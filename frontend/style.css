@@ -1,0 +1,44 @@
+:root{
+  --accent:#0b93f6;
+  --muted:#6b7280;
+  --bg:#f3f4f6;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,Arial,sans-serif;
+  margin:0;background:var(--bg);height:100vh;overflow:hidden;
+}
+.container{display:flex;height:100vh}
+.sidebar{width:320px;background:#fff;padding:16px;border-right:1px solid #e6e6e6;display:flex;flex-direction:column}
+.profile{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.profile img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.profile #profileName{font-weight:600}
+.search input{width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:8px}
+.contacts{list-style:none;padding:8px 0;margin:8px 0;overflow:auto}
+.contacts li{padding:10px;border-radius:8px;cursor:pointer}
+.contacts li:hover{background:#f3f7fb}
+.main{flex:1;display:flex;flex-direction:column}
+#chatHeader{padding:16px;border-bottom:1px solid #e6e6e6;font-weight:600}
+.chat-box{flex:1;padding:16px;overflow:auto;background-image:var(--bg-image);background-size:cover}
+.chat-form{display:flex;padding:12px;border-top:1px solid #e6e6e6}
+.chat-form input{flex:1;padding:10px;border-radius:8px;border:1px solid #e5e7eb;margin-right:8px}
+.chat-form button{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:8px}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);}
+.modal-content{background:#fff;padding:20px;border-radius:8px;width:320px}
+.settings-corner{position:absolute;right:16px;top:16px}
+.world-chat{margin-top:8px}
+.world-chat button{width:100%;padding:8px;border-radius:8px;border:1px solid #e5e7eb;background:#fff}
+.msg{max-width:70%;margin:8px 0;padding:8px;border-radius:10px;display:inline-block}
+.msg-in{background:#fff;border:1px solid #e6e6e6}
+.msg-out{background:linear-gradient(90deg,var(--accent),#0576d6);color:#fff;margin-left:auto}
+.msg-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.msg-body{font-size:14px}
+
+/* responsive */
+@media (max-width:800px){
+  .sidebar{width:100%;height:160px;order:2;overflow:auto}
+  .container{flex-direction:column}
+  .main{order:1}
+  .chat-form input{padding:12px}
+}
+.settings-icon{position:absolute;right:18px;bottom:18px;background:var(--accent);color:#fff;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,147,246,0.2);cursor:pointer}

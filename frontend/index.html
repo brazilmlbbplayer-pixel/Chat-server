@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="profile">
+        <img id="profileAvatar" src="" alt="avatar">
+        <div>
+          <div id="profileName">Guest</div>
+          <div id="profileUsername"></div>
+        </div>
+      </div>
+      <div class="search">
+        <input id="searchInput" placeholder="Search users...">
+      </div>
+      <div class="world-chat">
+        <button id="worldBtn">🌐 World Chat</button>
+      </div>
+      <ul id="userList" class="contacts"></ul>
+      <button id="settingsBtn">Settings</button>
+    </aside>
+
+    <main class="main" id="chatMain">
+      <div id="chatHeader">Select a user to start chatting</div>
+      <div id="chatBox" class="chat-box"></div>
+      <form id="chatForm" class="chat-form">
+        <input type="text" id="message" placeholder="Type a message">
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password (optional)">
+        <button type="submit">Login / Register</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <h2>Settings</h2>
+      <input id="displayName" placeholder="Display name">
+      <input id="avatarUrl" placeholder="Avatar URL">
+      <input id="backgroundUrl" placeholder="Background image URL">
+      <button id="saveProfile">Save</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

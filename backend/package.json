@@ -1,0 +1,16 @@
+{
+	"name": "chat-server-backend",
+	"version": "1.0.0",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"bcrypt": "^5.1.0",
+		"dotenv": "^17.2.1",
+		"express": "^4.18.2",
+		"mongoose": "^7.0.0",
+		"ws": "^8.0.0"
+	}
+}
